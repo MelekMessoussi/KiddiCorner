@@ -39,9 +39,6 @@ ebcdic
 editdistance
 einops
 entrypoints
-espnet
-espnet-model-zoo
-espnet-tts-frontend
 exceptiongroup
 executing
 extract-msg
@@ -53,10 +50,6 @@ fsspec
 g2p-en
 gitdb
 GitPython
-google-api-core
-google-auth
-google-cloud-texttospeech
-googleapis-common-protos
 greenlet
 grpcio
 grpcio-status
@@ -141,7 +134,7 @@ python-dateutil
 python-pptx
 pyttsx3
 pytz
-pywin32
+
 pyworld
 PyYAML
 pyzmq
