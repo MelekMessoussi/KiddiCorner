@@ -42,9 +42,6 @@ ebcdic==1.1.1
 editdistance==0.8.1
 einops==0.8.0
 entrypoints==0.4
-espnet==202402
-espnet-model-zoo==0.1.7
-espnet-tts-frontend==0.0.3
 exceptiongroup==1.2.2
 executing==2.0.1
 extract-msg==0.28.7
@@ -57,10 +54,6 @@ fsspec==2024.6.1
 g2p-en==2.1.0
 gitdb==4.0.11
 GitPython==3.1.43
-google-api-core==2.19.1
-google-auth==2.32.0
-google-cloud-texttospeech==2.16.5
-googleapis-common-protos==1.63.2
 greenlet==3.0.3
 grpcio==1.65.2
 grpcio-status==1.65.2
@@ -130,8 +123,6 @@ platformdirs==4.2.2
 plotly==5.23.0
 pooch==1.8.2
 prompt_toolkit==3.0.47
-proto-plus==1.24.0
-protobuf==3.20.3
 psutil==6.0.0
 pure_eval==0.2.3
 pyarrow==17.0.0
