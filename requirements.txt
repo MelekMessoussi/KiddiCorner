@@ -170,7 +170,7 @@ rpds-py==0.19.1
 rsa==4.9
 safetensors==0.4.3
 scikit-learn==1.5.1
-scipy==1.7.3
+scipy
 seaborn==0.13.2
 semver==3.0.2
 sentencepiece==0.1.97
