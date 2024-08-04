@@ -218,7 +218,7 @@ webcolors==1.13
 websocket-client==0.56.0
 websockets==11.0.3
 widgetsnbextension==4.0.9
-wordsegment==1.4.3
+wordsegment
 wrapt==1.14.1
 yarl==1.9.2
 zipp==3.17.0
