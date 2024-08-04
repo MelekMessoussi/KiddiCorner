@@ -46,7 +46,7 @@ tiktoken==0.4.0
 textract==1.6.5
 PyPDF2==3.0.1
 python-dotenv==1.0.0
-huggingface-hub==0.14.1
+huggingface-hub
 transformers==4.30.2s
 openai==0.27.8
 faiss-cpu==1.7.4
