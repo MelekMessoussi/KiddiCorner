@@ -194,7 +194,7 @@ def run_UI():
     # Additional Interactive Content Section
     st.markdown("<div class='interactive-section'>", unsafe_allow_html=True)
     st.header("Why Choose KiddyCorner? 🤔\n \
-        Empower your child's emotions and social skills with KiddyCorner—where fun meets learning for a brighter, more confident future!")
+        KiddyCorner makes emotional learning easy and enjoyable for kids.")
     
     st.write("""
             <ul>
