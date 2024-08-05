@@ -62,7 +62,7 @@ st.markdown("""
                     }
                 </style>
                 <div class="image-container">
-                    <img src="app/static/téléchargement (9).gif" width="300" height="200"/>
+                    <img src="app/static/dance.gif" width="300" height="200"/>
                 </div>
                 """, unsafe_allow_html=True)
 # Text input for the song topic
