@@ -155,7 +155,7 @@ def run_UI():
     with col2:
         st.markdown("""
                     <div class='interactive-card'>
-                        <img src="app/static/téléchargement (2).jfif" alt="Mindful Journaling"/>
+                        <img src="app/static/Mindful_Journaling.jfif" alt="Mindful Journaling"/>
                         <p><strong>Mindful Journaling</strong><br>Share your mood and learn mindfulness through exercises.</p>
                     </div>
                     """, unsafe_allow_html=True)
