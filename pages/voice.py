@@ -148,14 +148,3 @@ st.markdown("""
 
 mic()
 
-with st.sidebar:
-    st.subheader("🧸 How to Play with Gabby?")
-    st.markdown("""
-        💡 Hey kiddo! Curiosity is fantastic! What can I assist you with?
-        
-        💡 Little genius! Ready to unravel some mysteries?
-        
-        💡 Hey curious mind! What's the question of the day?
-        
-        **JUST CLICK `Ask Me` button and SAY OUTLOUD 📣 your questions**
-    """)
