@@ -9,9 +9,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Load API keys
-headers = {
-    "AI71_API_KEY" : st.secrets["AI71_API_KEY"]
-}
+AI71_API_KEY = st.secrets["ai71"]["api_key"]
+
+
 client = AI71(AI71_API_KEY)
 API_TOKEN = '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'
 API_URL = "https://api-inference.huggingface.co/models/nerijs/pixel-art-xl"
