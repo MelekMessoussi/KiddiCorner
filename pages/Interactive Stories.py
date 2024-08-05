@@ -10,7 +10,7 @@ load_dotenv()
 
 # Load API keys
 headers = {
-    "AI71_API_KEY" = st.secrets["AI71_API_KEY"]
+    "AI71_API_KEY" : st.secrets["AI71_API_KEY"]
 }
 client = AI71(AI71_API_KEY)
 API_TOKEN = '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'
