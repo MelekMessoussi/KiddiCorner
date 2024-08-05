@@ -18,7 +18,7 @@ load_dotenv()
 
 
 # Load API key from environment variable
-AI71_API_KEY = 'api71-api-3c8094f7-5999-4d44-8f8b-be93bbccd82d'
+AI71_API_KEY = st.secrets["AI71_API_KEY"]
 client = AI71(AI71_API_KEY)
 
 
