@@ -207,16 +207,7 @@ def run_UI():
         """, unsafe_allow_html=True)
     
     # Sidebar menu
-    with st.sidebar:
-        st.subheader("About the app")
-        st.markdown("""
-                    **KiddyCorner** is a fun app where kids can:
-                    - Journal about their feelings 📔
-                    - Practice conversations 💬
-                    - Engage in fun games and exercises 🎲
-                    
-                    It's an adventure in learning! 🌟
-                    """)
+
 
 # Application entry point
 if __name__ == "__main__":
