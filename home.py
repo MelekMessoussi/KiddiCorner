@@ -75,7 +75,7 @@ def run_UI():
                         flex-direction: column;
                         justify-content: center;
                         align-items: center; /* Center contents horizontally */
-                        background-color: #f9f9f9; /* Light background color */
+                        background-color: #ffffff; /* Light background color */
                         margin: 10px; /* Space between cards */
                     }
                     
