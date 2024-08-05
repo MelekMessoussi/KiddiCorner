@@ -179,7 +179,7 @@ def run_UI():
     with col5:
         st.markdown("""
                     <div class='interactive-card'>
-                        <img src="app/static/téléchargement (1).jfif" alt="Music"/>
+                        <img src="app/static/music.jfif" alt="Music"/>
                         <p><strong>Sing and Learn</strong><br>Enjoy fun songs that help you learn in a joyful way.</p>
                     </div>
                     """, unsafe_allow_html=True)
