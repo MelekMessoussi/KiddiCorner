@@ -34,7 +34,7 @@ stack-data
 
 torch
 
-
+streamlit
 langchain
 pypdf==3.12.1
 pandas==2.0.3
