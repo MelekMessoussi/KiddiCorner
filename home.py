@@ -130,7 +130,7 @@ def run_UI():
                     }
                 </style>
                 <div class="image-container">
-                    <img src="app/static/téléchargement(3).gif" alt="Interactive GIF"/>
+                    <img src="app/static/home_first_gif.gif" alt="Interactive GIF"/>
                 </div>
                 <div class="fun-text">
                     <p><strong>Unlock Your Child's Emotional and Social Potential 🎈</strong></p>
