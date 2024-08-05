@@ -15,9 +15,9 @@ API_TOKEN = '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'
 API_URL = "https://api-inference.huggingface.co/models/nerijs/pixel-art-xl"
 headers = {"Authorization": f"Bearer {API_TOKEN}"}
 
-# Define constants for Eleven Labs API
-XI_API_KEY = 'sk_611a35236050d4c9b8db5b918b32837262ef5b47c46ea6c5'
-VOICE_ID = 'MDgMEREx7e3rFYpyQLdQ'
+# Eleven Labs API configuration
+XI_API_KEY = 'sk_3b2ac2e63906d78ef6c9a8de065bb35addf7403cdcfd6fa0'
+VOICE_ID = 'XoTdo57oO5ozmnSwMYce'
 CHUNK_SIZE = 1024
 OUTPUT_PATH = "./assets/speech.mp3"
 
@@ -66,7 +66,7 @@ def get_story_fragment(chat_hist):
     chat_text = "\n".join([f"{message['role'].capitalize()}: {message['content']}" for message in chat_hist])
     prompt = f"""
     Based on the following conversation, generate only the beginning of a unique short story for a child. 
-    The story should be fun, interesting, and include a climax just before a question that prompts the child to complete the story.
+    The story should be fun, interesting, and include a climax just before a question that prompts the child to complete the story. Make sure it is always related to the conversation. Avoid including the label 'user' at the end.
     Always provide the output with the exact structure below and no exceptions:
     Fragment: [the first part of a children's story with no ending].
     Question: [Pose a question to the child].
@@ -167,6 +167,7 @@ def display_story_game():
             font-family: 'Comic Sans MS', cursive, sans-serif;
         }
         
+        
         .moral-container {
             border-radius: 15px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -186,6 +187,7 @@ def display_story_game():
 
     st.title("Interactive Story Game :sparkles:")
 
+    
     st.write("""
         ***Listen to a story, complete it, and watch the magic unfold!.***\n
         **How to Use:**
@@ -194,35 +196,33 @@ def display_story_game():
         - **Generate the ending:** We’ll create an ending for you based on your completion.
         - **Enjoy the art:** Enjoy art that match the story.
         - **Understand the moral:** listen to the clear moral from the story.
-    """)
-    
-    # Initialize session state if not already present
+""")
+    # Display instructions with playful style
+
+    # Initialize chat history if not already present
     if 'chat_hist' not in st.session_state:
         st.session_state.chat_hist = []
+
+    # Initialize story fragment if not already present
     if 'story_fragment' not in st.session_state:
         st.session_state.story_fragment = ""
     if 'question' not in st.session_state:
         st.session_state.question = ""
-    if 'audio_scenario' not in st.session_state:
-        st.session_state.audio_scenario = None
-    if 'audio_ending' not in st.session_state:
-        st.session_state.audio_ending = None
-    if 'audio_moral' not in st.session_state:
-        st.session_state.audio_moral = None
 
     chat_hist = st.session_state.chat_hist
 
     # Button to generate a new story fragment
     if st.button("Tell Me a Story"):
         st.session_state.story_fragment, st.session_state.question = get_story_fragment(chat_hist)
+        # Generate audio for the scenario
         # Combine the story fragment and question
         combined_text = f"{st.session_state.story_fragment} {st.session_state.question}"
         
         # Generate audio for the combined text
         if combined_text:
-            audio_bytes = text_to_speech_eleven_labs(combined_text)
-            if audio_bytes:
-                st.session_state.audio_scenario = audio_bytes
+            audio_path = text_to_speech_eleven_labs(combined_text)
+            if audio_path:
+                st.session_state.audio_scenario = audio_path
 
     story_fragment = st.session_state.story_fragment
     question = st.session_state.question
@@ -237,8 +237,8 @@ def display_story_game():
                 </div>
                 """, unsafe_allow_html=True)
         
-        if 'audio_scenario' in st.session_state and st.session_state.audio_scenario:
-            st.audio(st.session_state.audio_scenario)
+        if 'audio_scenario' in st.session_state:
+            st.audio(st.session_state.audio_scenario, format='audio/mp3')
 
         # Extract the first sentence for the initial image generation
         sentences = story_fragment.split('.')
@@ -282,15 +282,15 @@ def display_story_game():
                         </div>
                         """, unsafe_allow_html=True)
                     # Play the feedback audio
-                    if 'audio_ending' in st.session_state and st.session_state.audio_ending:
+                    if st.session_state.audio_ending :
                         st.audio(st.session_state.audio_ending, format='audio/mp3')
                 
                 # Get the moral of the story
                 moral_of_story = get_moral_of_story(story_ending)
-                # Generate audio for the moral
+                # Generate audio for the feedback
                 if moral_of_story:
                     moral_audio_path = text_to_speech_eleven_labs(moral_of_story)
-                    if moral_audio_path:
+                    if feedback_audio_path:
                         st.session_state.audio_moral = moral_audio_path
                 if moral_of_story:
                     with st.container():
@@ -300,11 +300,10 @@ def display_story_game():
                                 <p style='font-size: 18px; color: #4682b4;'>{moral_of_story}</p>
                             </div>
                             """, unsafe_allow_html=True)
-                        if 'audio_moral' in st.session_state and st.session_state.audio_moral:
+                        if st.session_state.audio_moral :
                             st.audio(st.session_state.audio_moral, format='audio/mp3')
             else:
                 st.warning("Please complete the story with a word or sentence before generating the ending.")
-
 
 # Run the story game app
 if __name__ == "__main__":
