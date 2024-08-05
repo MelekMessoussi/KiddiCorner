@@ -1,4 +1,3 @@
-
 pypdf
 pandas
 numpy
@@ -21,3 +20,5 @@ pydantic
 streamlit-mic-recorder
 underthesea
 ai71
+plotly
+datetime
