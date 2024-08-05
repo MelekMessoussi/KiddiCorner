@@ -72,3 +72,8 @@ This project is licensed under the [MIT License](LICENSE).
 ## 🎉 Special Mention
 
 This project was created as part of the Falcon Hackathon organized by Lablab.ai. We are excited to share our innovative solution with the community and contribute to the event's success!
+
+
+## ⚠️ Limitations
+
+Currently, KiddyCorner uses Eleven Labs for text-to-speech functionality. Please note that Eleven Labs offers a free trial, and we are unable to purchase a paid plan due to country-specific limitations. This may impact the availability of text-to-speech features depending on the trial’s usage limits.
