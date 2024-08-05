@@ -186,7 +186,7 @@ def run_UI():
     with col6:
         st.markdown("""
                     <div class='interactive-card'>
-                        <img src="app/static/ezgif.com-cut (1).gif" alt="Report Generation"/>
+                        <img src="app/static/report.gif" alt="Report Generation"/>
                         <p><strong>Detailed Reports</strong><br>Parents can monitor their kids and learn about them.</p>
                     </div>
                     """, unsafe_allow_html=True)
