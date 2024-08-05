@@ -220,9 +220,9 @@ def display_story_game():
         
         # Generate audio for the combined text
         if combined_text:
-            audio_path = text_to_speech_eleven_labs(combined_text)
-            if audio_path:
-                st.session_state.audio_scenario = audio_path
+            audio_bytes = text_to_speech_eleven_labs(combined_text)
+            if audio_bytes:
+                st.session_state.audio_scenario = audio_bytes
 
     story_fragment = st.session_state.story_fragment
     question = st.session_state.question
@@ -238,7 +238,7 @@ def display_story_game():
                 """, unsafe_allow_html=True)
         
         if 'audio_scenario' in st.session_state:
-            st.audio(st.session_state.audio_scenario, format='audio/mp3')
+            st.audio(st.session_state.audio_scenario)
 
         # Extract the first sentence for the initial image generation
         sentences = story_fragment.split('.')
