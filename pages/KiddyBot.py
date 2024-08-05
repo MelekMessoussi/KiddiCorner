@@ -10,7 +10,7 @@ from ai71 import AI71
 load_dotenv()
 
 # Load API key from environment variable
-AI71_API_KEY = st.secrets["AI71_API_KEY"]
+AI71_API_KEY = st.secrets["ai71"]["api_key"]
 client = AI71(AI71_API_KEY)
 # Define constants for Eleven Labs API
 XI_API_KEY = 'sk_f376f27e3e40f1d59e0ca051498a6dd98ba37801dc3092e9'
