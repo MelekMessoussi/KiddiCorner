@@ -14,11 +14,11 @@ AI71_API_KEY = 'api71-api-3c8094f7-5999-4d44-8f8b-be93bbccd82d'
 client = AI71(AI71_API_KEY)
 
 # Define constants for Eleven Labs API
-XI_API_KEY = 'sk_bc9882cb9de714f58c98fa0b1546ecfb562784e3d2e6c23b'
-
-VOICE_ID = '2sEJPWCTQOR2YLwN2aWM'
+XI_API_KEY = 'sk_3b2ac2e63906d78ef6c9a8de065bb35addf7403cdcfd6fa0'
+VOICE_ID = 'XoTdo57oO5ozmnSwMYce'
 CHUNK_SIZE = 1024
 OUTPUT_PATH = "./assets/speech.mp3"
+
 
 def clean_response(content):
     """Remove unwanted text from the response and trim quotes."""
