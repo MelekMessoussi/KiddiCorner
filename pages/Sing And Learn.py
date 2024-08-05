@@ -7,7 +7,7 @@ from APIs.helper import autoplay_audio
 load_dotenv()
 
 # Initialize AI71 client
-AI71_API_KEY = 'api71-api-3c8094f7-5999-4d44-8f8b-be93bbccd82d'
+AI71_API_KEY = st.secrets["AI71_API_KEY"]
 client = AI71(AI71_API_KEY)
 
 # Function to generate educational song lyrics with specific melody and emojis
