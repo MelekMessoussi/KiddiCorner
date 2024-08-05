@@ -1,6 +1,7 @@
 
 pypdf
 pandas
+numpy
 matplotlib
 tiktoken
 textract
