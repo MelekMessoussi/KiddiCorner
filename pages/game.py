@@ -167,7 +167,6 @@ def display_story_game():
             font-family: 'Comic Sans MS', cursive, sans-serif;
         }
         
-        
         .moral-container {
             border-radius: 15px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -187,7 +186,6 @@ def display_story_game():
 
     st.title("Interactive Story Game :sparkles:")
 
-    
     st.write("""
         ***Listen to a story, complete it, and watch the magic unfold!.***\n
         **How to Use:**
@@ -196,25 +194,27 @@ def display_story_game():
         - **Generate the ending:** We’ll create an ending for you based on your completion.
         - **Enjoy the art:** Enjoy art that match the story.
         - **Understand the moral:** listen to the clear moral from the story.
-""")
-    # Display instructions with playful style
-
-    # Initialize chat history if not already present
+    """)
+    
+    # Initialize session state if not already present
     if 'chat_hist' not in st.session_state:
         st.session_state.chat_hist = []
-
-    # Initialize story fragment if not already present
     if 'story_fragment' not in st.session_state:
         st.session_state.story_fragment = ""
     if 'question' not in st.session_state:
         st.session_state.question = ""
+    if 'audio_scenario' not in st.session_state:
+        st.session_state.audio_scenario = None
+    if 'audio_ending' not in st.session_state:
+        st.session_state.audio_ending = None
+    if 'audio_moral' not in st.session_state:
+        st.session_state.audio_moral = None
 
     chat_hist = st.session_state.chat_hist
 
     # Button to generate a new story fragment
     if st.button("Tell Me a Story"):
         st.session_state.story_fragment, st.session_state.question = get_story_fragment(chat_hist)
-        # Generate audio for the scenario
         # Combine the story fragment and question
         combined_text = f"{st.session_state.story_fragment} {st.session_state.question}"
         
@@ -237,7 +237,7 @@ def display_story_game():
                 </div>
                 """, unsafe_allow_html=True)
         
-        if 'audio_scenario' in st.session_state:
+        if 'audio_scenario' in st.session_state and st.session_state.audio_scenario:
             st.audio(st.session_state.audio_scenario)
 
         # Extract the first sentence for the initial image generation
@@ -282,15 +282,15 @@ def display_story_game():
                         </div>
                         """, unsafe_allow_html=True)
                     # Play the feedback audio
-                    if st.session_state.audio_ending :
+                    if 'audio_ending' in st.session_state and st.session_state.audio_ending:
                         st.audio(st.session_state.audio_ending, format='audio/mp3')
                 
                 # Get the moral of the story
                 moral_of_story = get_moral_of_story(story_ending)
-                # Generate audio for the feedback
+                # Generate audio for the moral
                 if moral_of_story:
                     moral_audio_path = text_to_speech_eleven_labs(moral_of_story)
-                    if feedback_audio_path:
+                    if moral_audio_path:
                         st.session_state.audio_moral = moral_audio_path
                 if moral_of_story:
                     with st.container():
@@ -300,10 +300,11 @@ def display_story_game():
                                 <p style='font-size: 18px; color: #4682b4;'>{moral_of_story}</p>
                             </div>
                             """, unsafe_allow_html=True)
-                        if st.session_state.audio_moral :
+                        if 'audio_moral' in st.session_state and st.session_state.audio_moral:
                             st.audio(st.session_state.audio_moral, format='audio/mp3')
             else:
                 st.warning("Please complete the story with a word or sentence before generating the ending.")
+
 
 # Run the story game app
 if __name__ == "__main__":
