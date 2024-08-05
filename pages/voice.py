@@ -14,8 +14,8 @@ AI71_API_KEY = 'api71-api-3c8094f7-5999-4d44-8f8b-be93bbccd82d'
 client = AI71(AI71_API_KEY)
 
 # Define constants for Eleven Labs API
-XI_API_KEY = 'sk_611a35236050d4c9b8db5b918b32837262ef5b47c46ea6c5'
-VOICE_ID = 'MDgMEREx7e3rFYpyQLdQ'
+XI_API_KEY = 'sk_f376f27e3e40f1d59e0ca051498a6dd98ba37801dc3092e9'
+VOICE_ID = '2bobRev0lD8OHAXqoW7x'
 CHUNK_SIZE = 1024
 OUTPUT_PATH = "./assets/speech.mp3"
 
