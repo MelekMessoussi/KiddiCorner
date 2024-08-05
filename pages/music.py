@@ -80,15 +80,4 @@ if st.button("Create Song"):
     else:
         st.warning("Please enter a topic.")
 
-with st.sidebar:
-    st.subheader("🧸 How to Use the Lyrics Generator")
-    st.markdown("""
-                 💡 Enter a topic to generate a fun and educational songs and don't forget to sing along'
-                 
-                 💡 Example topics:
-                 - "emotions"
-                 - "Animals"
-                 - "Counting numbers"
-                 
-                 **Click 'Generate Lyrics' to see the song with tune emojis 🎵 and 🎶!**
-                 """)
+
