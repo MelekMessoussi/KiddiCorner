@@ -13,9 +13,6 @@ plotly
 
 
 
-PyAudio
-
-
 
 Pygments
 
