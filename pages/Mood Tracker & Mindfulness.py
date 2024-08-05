@@ -48,17 +48,20 @@ def text_to_speech_eleven_labs(text):
     }
 
 
+   
+
+
     response = requests.post(tts_url, headers=headers, json=data, stream=True)
-
-
-    if response.ok:
-        with open(OUTPUT_PATH, "wb") as f:
+    if response.status_code == 200:
+        with open(OUTPUT_PATH, 'wb') as file:
             for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
-                f.write(chunk)
+                if chunk:
+                    file.write(chunk)
         return OUTPUT_PATH
     else:
-        st.error(f"Text-to-speech conversion failed: {response.text}")
+        st.error("Failed to generate speech.")
         return None
+
 
 
 # Function to handle mood selection
