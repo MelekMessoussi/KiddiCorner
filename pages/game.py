@@ -15,8 +15,9 @@ API_TOKEN = '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'
 API_URL = "https://api-inference.huggingface.co/models/nerijs/pixel-art-xl"
 headers = {"Authorization": f"Bearer {API_TOKEN}"}
 
-XI_API_KEY = 'sk_3b2ac2e63906d78ef6c9a8de065bb35addf7403cdcfd6fa0'
-VOICE_ID = 'XoTdo57oO5ozmnSwMYce'
+# Define constants for Eleven Labs API
+XI_API_KEY = 'sk_611a35236050d4c9b8db5b918b32837262ef5b47c46ea6c5'
+VOICE_ID = 'MDgMEREx7e3rFYpyQLdQ'
 CHUNK_SIZE = 1024
 OUTPUT_PATH = "./assets/speech.mp3"
 
