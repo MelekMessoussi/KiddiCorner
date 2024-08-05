@@ -32,7 +32,7 @@ def run_UI():
 
     # Set the page title
     st.header("KiddyCorner 🌟\n \
-        Where Fun and Learning Go Hand in Hand!")
+        Fun and Play, Learn the Right Way!")
 
     st.markdown("""
                 <style>
