@@ -11,7 +11,7 @@ import altair as alt
 load_dotenv()
 
 # Load API key from environment variable
-AI71_API_KEY = st.secrets["AI71_API_KEY"]
+AI71_API_KEY = st.secrets["ai71"]["api_key"]
 client = AI71(AI71_API_KEY)
 
 def analyze_sentiment(text):
