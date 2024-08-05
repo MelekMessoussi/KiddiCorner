@@ -23,9 +23,8 @@ client = AI71(AI71_API_KEY)
 
 
 # Eleven Labs API setup
-XI_API_KEY = 'sk_bc9882cb9de714f58c98fa0b1546ecfb562784e3d2e6c23b'
-
-VOICE_ID = '2sEJPWCTQOR2YLwN2aWM'
+XI_API_KEY = 'sk_3b2ac2e63906d78ef6c9a8de065bb35addf7403cdcfd6fa0'
+VOICE_ID = 'XoTdo57oO5ozmnSwMYce'
 CHUNK_SIZE = 1024
 OUTPUT_PATH = "./assets/speech.mp3"
 
