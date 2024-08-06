@@ -284,7 +284,8 @@ def display_story_game():
                         </div>
                         """, unsafe_allow_html=True)
                     # Play the feedback audio
-                    if st.session_state.audio_ending :
+                    
+                    if 'audio_ending' in st.session_state:
                         st.audio(st.session_state.audio_ending, format='audio/mp3')
                 
                 # Get the moral of the story
