@@ -304,7 +304,7 @@ def display_story_game():
                             </div>
                             """, unsafe_allow_html=True)
                         if 'audio_moral' in st.session_state:
-                        st.audio(st.session_state.audio_moral, format='audio/mp3')
+                            st.audio(st.session_state.audio_moral, format='audio/mp3')
                         
             else:
                 st.warning("Please complete the story with a word or sentence before generating the ending.")
