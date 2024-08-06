@@ -134,7 +134,7 @@ def run_UI():
                 </div>
                 <div class="fun-text">
                     <p><strong>Unlock Your Child's Emotional and Social Potential 🎈</strong></p>
-                    <p><strong>KiddyCorner is the ultimate app for kids ages 4-10 to explore, understand, and express their emotions while having fun! Our goal is to help children develop emotional intelligence and essential social skills through engaging activities, games, and exercises. Let's make learning about feelings a joyful experience for kids and a helpful tool for parents! 🌟</strong></p>
+                    <p><strong>KiddyCorner is the ultimate app for kids ages 5-10 to explore, understand, and express their emotions while having fun! Our goal is to help children develop emotional intelligence and essential social skills through engaging activities, games, and exercises. Let's make learning about feelings a joyful experience for kids and a helpful tool for parents! 🌟</strong></p>
                 </div>
                 """, unsafe_allow_html=True)
 
@@ -198,7 +198,7 @@ def run_UI():
     
     st.write("""
             <ul>
-            <li><strong> Designed for Young Minds 🧠:</strong> Age-appropriate content that resonates with children ages 2-8.</li>
+            <li><strong> Designed for Young Minds 🧠:</strong> Age-appropriate content that resonates with children ages 5-10.</li>
             <li><strong>Fun and Interactive 🎉:</strong> Combines play with learning for an engaging experience.</li>
             <li><strong>Supports Emotional Growth 💖:</strong> Helps kids manage, express, and understand their emotions.</li>
             <li><strong>Personalized Learning 🧩:</strong> Tailored experiences based on your child’s unique interactions and needs.</li>
