@@ -174,7 +174,8 @@ def display_social_skills_game():
         - **Generate a social scenario:** click on "let's solve a problem".
         - **Read the scenario:** Understand the social challenge or problem.
         - **Respond to the challenge:** Provide your answer or solution to the scenario.
-        - **Receive feedback:** Get constructive feedback based on your response.
+        - **Receive feedback:** Get constructive feedback based on your response.\n
+        **Make sure to wait for it to finish running**
 """)
 
     
