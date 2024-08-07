@@ -43,7 +43,7 @@ st.write("""
     **How to Use:**
     - **Choose a topic:** write what you want the song to be about.
     - **Generate a Song:** Click the "Create Song" button to generate a song tailored to that mood.
-    - **Listen and Sing:** Play the song and sing along to make Social-eemotional learning enjoyable.\n
+    - **Listen and Sing:** Play the song and sing along to make Social-emotional learning enjoyable.\n
     **Make sure to wait for it to finish running**
 """)
 
