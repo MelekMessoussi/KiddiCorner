@@ -196,7 +196,7 @@ def display_story_game():
         - **Answer the question:** Add your own twist or ending to the story.
         - **Generate the ending:** We’ll create an ending for you based on your completion.
         - **Enjoy the art:** Enjoy art that match the story.
-        - **Understand the moral:** listen to the clear moral from the story.
+        - **Understand the moral:** listen to the clear moral from the story.\n
         **Make sure to wait for it to finish running**
 """)
     # Display instructions with playful style
