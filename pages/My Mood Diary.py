@@ -135,7 +135,8 @@ st.write("""
     - Track your mood and express your thoughts.
     - Save your mood to receive personalized mindfulness exercises based on what you wrote.
     - Select an exercise type and click the "Generate Exercise" button.
-    - Follow the instructions to engage in the mindfulness practice.
+    - Follow the instructions to engage in the mindfulness practice.\n
+    **Make sure to wait for it to finish running**
 """)
 
 cols = st.columns(len(mood_options))
