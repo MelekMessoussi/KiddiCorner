@@ -59,7 +59,6 @@ def text_to_speech_eleven_labs(text):
                     file.write(chunk)
         return OUTPUT_PATH
     else:
-        st.error("Failed to generate speech.")
         return None
 
 
