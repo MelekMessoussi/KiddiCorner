@@ -191,11 +191,13 @@ def display_story_game():
     st.write("""
         ***Listen to a story, complete it, and watch the magic unfold!.***\n
         **How to Use:**
+        - **Talk to kiddybot:** hav a conversation about your worries or what you like.
         - **Read the first part of the story:** See what happens at the start of the story.
         - **Answer the question:** Add your own twist or ending to the story.
         - **Generate the ending:** We’ll create an ending for you based on your completion.
         - **Enjoy the art:** Enjoy art that match the story.
         - **Understand the moral:** listen to the clear moral from the story.
+        **Make sure to wait for it to finish running**
 """)
     # Display instructions with playful style
 
