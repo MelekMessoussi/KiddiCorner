@@ -13,8 +13,8 @@ load_dotenv()
 AI71_API_KEY = st.secrets["ai71"]["api_key"]
 client = AI71(AI71_API_KEY)
 # Define constants for Eleven Labs API
-XI_API_KEY = 'sk_f376f27e3e40f1d59e0ca051498a6dd98ba37801dc3092e9'
-VOICE_ID = '2bobRev0lD8OHAXqoW7x'
+XI_API_KEY = 'sk_b8b72c5b969d6951e08cad16fe550cc68e58e2dff0657519'
+VOICE_ID = 'lbw0VLXRBdYeEtY086mt'
 CHUNK_SIZE = 1024
 OUTPUT_PATH = "./assets/speech.mp3"
 
