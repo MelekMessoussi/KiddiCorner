@@ -58,7 +58,6 @@ def generate_image_from_prompt(prompt):
         image = Image.open(BytesIO(response.content))
         return image
     else:
-        st.error("Failed to generate image.")
         return None
 
 import re
